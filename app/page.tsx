@@ -1,8 +1,10 @@
+import Lang from "@/app/components/lang/page";
 import Navbar from "@/app/components/navbar/page";
 
 export default function Home() {
   return (
       <>
+          <Lang/>
           <Navbar/>
           <div className="mx-80 flex justify-center">
               <div className="flex flex-col mt-20 text-7xl bold font-bold">
