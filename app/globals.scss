@@ -2,8 +2,18 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #0f2145;
+  --main-color: #3e31fa;
+  --gray: #788398;
 }
+
+@font-face {
+  font-family: 'RM Neue';
+  src: url('/public/fonts/RMNeueTRIAL-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 
 @theme inline {
   --color-background: var(--background);
@@ -14,13 +24,13 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: white;
+    --foreground: #0f2145;
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'RM Neue', sans-serif;
 }
