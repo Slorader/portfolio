@@ -1,6 +1,6 @@
-import Lang from "@/app/components/lang/page";
-import Navbar from "@/app/components/navbar/page";
-import Button from "@/app/components/button/page";
+import Lang from "@/components/lang/page";
+import Navbar from "@/components/navbar/page";
+import Button from "@/components/button/page";
 
 export default function Home() {
   return (
