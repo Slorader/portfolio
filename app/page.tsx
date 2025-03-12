@@ -7,7 +7,7 @@ export default function Home() {
       <>
           <Lang/>
           <Navbar/>
-          <div className="mx-80 flex flex-col justify-center">
+          <div className="mx-100 flex flex-col justify-center">
               <div className="flex flex-row items-center mt-20 mb-5">
                   <div className="flex relative w-[24px] h-[24px]">
                       <span className="absolute top-1/2 transform -translate-y-1/2 inline-flex w-[12px] h-[12px] animate-ping rounded-full bg-green-400 opacity-75"></span>
@@ -16,7 +16,7 @@ export default function Home() {
                   <p className="text-lg text-[var(--gray)] h-[24px]">Available for hire</p>
               </div>
               <div className="flex flex-col text-7xl bold font-bold">
-                  <span className="text-7xl bold font-bold">Hey, I'm Léo</span>
+                  <span className="text-7xl bold font-bold">Hey, I&#39;m Léo</span>
                   <div className="flex flex-row">
                       <span className="text-7xl bold font-bold mr-4">a</span>
                       <span className="text-7xl bold font-bold text-[var(--main-color)]">web developer</span>
@@ -27,6 +27,10 @@ export default function Home() {
                   <Button label="Linkedin" icon="linkedin"/>
                   <Button label="CV" icon="cv"/>
               </div>
+              <div className="mt-10">
+                  <p className="text-[var(--gray)] text-lg">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, illo, nesciunt! Accusantium deleniti dolore ea eaque eum, facere fugit iure labore possimus quae, qui temporibus? Amet debitis illo nemo quasi.</p>
+              </div>
+              <span className="w-full h-[1px] bg-[#e1e5ea] mt-10"></span>
           </div>
       </>
   );
