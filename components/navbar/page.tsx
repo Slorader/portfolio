@@ -7,7 +7,7 @@ import { MdOutlineEmail } from "react-icons/md";
 
 export default function Navbar() {
     return (
-        <div id="navbar" className="absolute left-5 top-1/2 transform -translate-y-1/2">
+        <div id="navbar" className="fixed w-20 z-0 left-5 top-1/2 transform -translate-y-1/2">
             <div className="flex flex-col items-center h-auto w-20 rounded-[50px] border-2 border-solid border-[#F3F5F8]">
                 <div className="flex z-3 justify-center items-center active w-17 h-17 rounded-[100px] mt-1 cursor-pointer">
                     <MdOutlineDashboard fontSize={30} />
