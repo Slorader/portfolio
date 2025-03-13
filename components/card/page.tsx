@@ -15,7 +15,7 @@ interface CardProps {
     organisation: string;
     date: string;
     localisation: string;
-    description: string;
+    description: string|null;
 }
 
 export default function Card({label, link, title, image, organisation, date, localisation, description}: CardProps) {
@@ -55,7 +55,7 @@ export default function Card({label, link, title, image, organisation, date, loc
                     <p className="text-xs text-[var(--gray)]">{organisation}</p>
                     <p className="text-xs text-[var(--gray)]">{date}</p>
                     <p className="text-xs text-[var(--gray)]">{localisation}</p>
-                    <p className="mt-3 text-s text-[var(--gray)]">{description}</p>
+                    {description && (<p className="mt-3 text-s text-[var(--gray)]">{description}</p>)}
                     <FaExternalLinkAlt
                         className="group-hover:text-[var(--main-color)] transition duration-300 ease-in-out absolute top-3 right-3 text-30"
                         fontSize={20}/>
