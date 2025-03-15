@@ -11,14 +11,14 @@ const rguImage = {
 const lyonImage = {
     src: "/images/UCBL-logo.png",
     alt: "Lyon",
-    width: 80,
+    width: 70,
     height: 20,
     className: "",
 }
 
 export default function Career() {
     return (
-        <>
+        <section className="mb-10">
             <h2 className="font-bold text-2xl mb-3">Career</h2>
             <Card
                 label="CCSD"
@@ -46,11 +46,11 @@ export default function Career() {
                 link="https://www.univ-lyon1.fr/"
                 title='Bachelor’s degree in Computer Science'
                 image={lyonImage}
-                organisation="Claude Bernard Lyon1 University"
+                organisation="Claude Bernard Lyon 1 University"
                 date="2022 - 2025"
                 localisation="Bourg-en-Bresse, France"
                 description={null}
             />
-        </>
+        </section>
     );
 }

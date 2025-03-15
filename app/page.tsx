@@ -2,6 +2,7 @@ import Lang from "@/components/lang/page";
 import Navbar from "@/components/navbar/page";
 import Button from "@/components/button/page";
 import Career from "@/components/career/page";
+import Project from "@/components/project/page";
 
 export default function Home() {
     return (
@@ -26,17 +27,17 @@ export default function Home() {
                     </div>
                 </div>
                 <div className="flex flex-row w-full">
-                    <Button label="Email" icon="email"/>
-                    <Button label="Linkedin" icon="linkedin"/>
-                    <Button label="CV" icon="cv"/>
+                    <Button label="Github" icon="github" link="https://github.com/Slorader"/>
+                    <Button label="CV" icon="cv" link="/docs/cv_leo.pdf"/>
                 </div>
-                <p className="mt-10 text-[var(--gray)] text-lg">My name is Léo TRUX, and I am a web developer from
+                <p className="mt-10 text-[var(--gray)]">My name is Léo TRUX, and I am a web developer from
                     France with a passion for website development. I&#39;m currently in my final year of a computer science
                     degree at Lyon 1 University.</p>
-                <p className="mt-4 text-[var(--gray)] text-lg">I have a solid experience in PHP,
+                <p className="mt-4 text-[var(--gray)]">I have a solid experience in PHP,
                     particularly with the Symfony framework. I&#39;m currently broadening my skills by learning Next.js and
                     Docker, to master modern technologies for fullstack development.</p>
                 <span className="w-full h-[1px] bg-[#e1e5ea] mt-8 mb-8"></span>
+                <Project/>
                 <Career/>
             </div>
         </>

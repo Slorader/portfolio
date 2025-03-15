@@ -12,9 +12,9 @@ interface CardProps {
         height: number,
         className: string,
     } | null;
-    organisation: string;
-    date: string;
-    localisation: string;
+    organisation: string|null;
+    date: string|null;
+    localisation: string|null;
     description: string|null;
 }
 
@@ -52,9 +52,9 @@ export default function Card({label, link, title, image, organisation, date, loc
                 )}
                 <div className="flex flex-col mx-8">
                     <h3 className="text-xl font-semibold">{title}</h3>
-                    <p className="text-xs text-[var(--gray)]">{organisation}</p>
-                    <p className="text-xs text-[var(--gray)]">{date}</p>
-                    <p className="text-xs text-[var(--gray)]">{localisation}</p>
+                    {organisation && (<p className="text-xs text-[var(--gray)]">{organisation}</p>)}
+                    {date && (<p className="text-xs text-[var(--gray)]">{date}</p>)}
+                    {localisation && (<p className="text-xs text-[var(--gray)]">{localisation}</p>)}
                     {description && (<p className="mt-3 text-s text-[var(--gray)]">{description}</p>)}
                     <FaExternalLinkAlt
                         className="group-hover:text-[var(--main-color)] transition duration-300 ease-in-out absolute top-3 right-3 text-30"
