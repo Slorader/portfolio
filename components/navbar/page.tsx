@@ -1,5 +1,4 @@
 "use client";
-import { FaLinkedin } from "react-icons/fa";
 import { MdOutlineDashboard } from "react-icons/md";
 import { MdWorkOutline } from "react-icons/md";
 import { MdOutlineSchool } from "react-icons/md";
@@ -20,10 +19,7 @@ export default function Navbar() {
                 </div>
             </div>
             <div className="mt-5 flex flex-col items-center h-auto w-20 rounded-[50px] border-2 border-solid border-[#F3F5F8]">
-                <div className="flex justify-center items-center hover:bg-gray-200 transition duration-300 ease-in-out w-17 h-17 rounded-[100px] mt-1 cursor-pointer">
-                    <FaLinkedin fontSize={30} />
-                </div>
-                <div className="flex mt-5 mb-1 justify-center items-center hover:bg-gray-200 transition duration-300 ease-in-out w-17 h-17 rounded-[100px] mt-1 cursor-pointer">
+                <div className="flex m-1 justify-center items-center hover:bg-gray-200 transition duration-300 ease-in-out w-17 h-17 rounded-[100px] cursor-pointer">
                     <MdOutlineEmail fontSize={30} />
                 </div>
             </div>

@@ -28,6 +28,7 @@ export default function Home() {
                 </div>
                 <div className="flex flex-row w-full">
                     <Button label="Github" icon="github" link="https://github.com/Slorader"/>
+                    <Button label="Linkedin" icon="linkedin" link="https://www.linkedin.com/in/leo-trux/"/>
                     <Button label="CV" icon="cv" link="/docs/cv_leo.pdf"/>
                 </div>
                 <p className="mt-10 text-[var(--gray)]">My name is Léo TRUX, and I am a web developer from
