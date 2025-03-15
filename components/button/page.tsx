@@ -1,16 +1,18 @@
 import { FaGithubSquare } from "react-icons/fa";
 import { PiReadCvLogo } from "react-icons/pi";
+import { FaLinkedin } from "react-icons/fa";
 import { JSX } from "react";
 
 interface ButtonProps {
     label: string;
-    icon: 'github' | 'cv';
+    icon: 'github' | 'linkedin' | 'cv';
     link: string;
 }
 
 const iconsStyle = "transition duration-300 ease-in-out group-hover:text-[var(--main-color)]";
 const iconsMap: Record<ButtonProps['icon'], JSX.Element> = {
     github: <FaGithubSquare className={iconsStyle} fontSize={30} />,
+    linkedin: <FaLinkedin className={iconsStyle} fontSize={30} />,
     cv: <PiReadCvLogo className={iconsStyle} fontSize={30} />,
 };
 
