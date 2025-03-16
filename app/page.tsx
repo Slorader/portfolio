@@ -10,7 +10,7 @@ export default function Home() {
         <>
             <Lang/>
             <Navbar/>
-            <div className="mx-100 z-2 flex flex-col justify-center">
+            <div className="mx-auto max-w-150 z-2 flex flex-col justify-center">
                 <div className="flex flex-row items-center mt-20 mb-5">
                     <div className="flex relative w-[24px] h-[24px]">
                       <span
