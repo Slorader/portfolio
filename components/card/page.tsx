@@ -1,5 +1,8 @@
 import {FaExternalLinkAlt} from "react-icons/fa";
+import { FaArrowRight } from "react-icons/fa";
 import Image from "next/image";
+import {JSX} from "react";
+import Link from "next/link";
 
 interface CardProps {
     label: string;
@@ -18,10 +21,16 @@ interface CardProps {
     description: string|null;
 }
 
+const className: string = "group-hover:text-[var(--main-color)] transition duration-300 ease-in-out absolute top-3 right-3 text-30";
+const iconMap: Record<CardProps['label'], JSX.Element> = {
+    project: <FaArrowRight className={className + " group-hover:-rotate-45"} fontSize={15}/>,
+};
+const getIcon = (label: CardProps['label']) => iconMap[label] ?? <FaExternalLinkAlt className={className} fontSize={15}/>;
+
 export default function Card({label, link, title, image, organisation, date, localisation, description}: CardProps) {
     return (
         <>
-            <a href={link}
+            <Link href={link}
                className="relative flex w-full group transition duration-300 ease-in-out hover:border-[var(--main-color)] rounded-[10px] border-2 border-solid border-[#e1e5ea] p-4 mb-5">
                 {label === 'CCSD' ? (
                     <div>
@@ -56,11 +65,9 @@ export default function Card({label, link, title, image, organisation, date, loc
                     {date && (<p className="text-xs text-[var(--gray)]">{date}</p>)}
                     {localisation && (<p className="text-xs text-[var(--gray)]">{localisation}</p>)}
                     {description && (<p className="mt-3 text-s text-[var(--gray)]">{description}</p>)}
-                    <FaExternalLinkAlt
-                        className="group-hover:text-[var(--main-color)] transition duration-300 ease-in-out absolute top-3 right-3 text-30"
-                        fontSize={20}/>
+                    {getIcon(label)}
                 </div>
-            </a>
+            </Link>
         </>
     );
 }
