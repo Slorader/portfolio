@@ -11,7 +11,7 @@ export default function Footer() {
             </div>
             <div className="relative flex items-center w-full mt-20 mb-5 gap-2">
                 <span className="text-[var(--gray)]">&#x00AE; 2025 - Léo Trux.</span>
-                <span className="text-[var(--gray)]">Developpe with NextJS, deploy with Vercel.</span>
+                <span className="text-[var(--gray)]">Developed with NextJS, deployed with Vercel.</span>
                 <MdLightMode fontSize={40} className="active:scale-95 transition duration-100 ease-in-out absolute right-0 rounded-[10px] border-2 border-solid p-2 cursor-pointer" />
             </div>
         </div>
