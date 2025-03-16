@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import "./globals.scss";
-
+import Scroll from "@/components/scroll/page";
 
 export const metadata: Metadata = {
-  title: "Léo TRUX",
-  description: "Portfolio",
+  title: "Léo TRUX - Portfolio",
+  description: "Leo's Portfolio ",
 };
+
 
 export default function RootLayout({
   children,
@@ -17,6 +18,7 @@ export default function RootLayout({
     <body
     >
     {children}
+    <Scroll/>
     </body>
     </html>
   );
