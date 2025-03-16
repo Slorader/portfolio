@@ -14,17 +14,16 @@ export default function Project() {
             <h2 className="font-bold text-2xl mb-3">Projects</h2>
             <div className="flex flex-row gap-2">
                 <Card
-                    label="Argu Ai"
-                    link=""
+                    label="project"
+                    link="/project/argu-ai"
                     title='Argu Ai'
                     image={arguImage}
                     organisation={null}
-                    date={null}
+                    date="2024"
                     localisation={null}
                     description="Argu Ai is a platform which help people to understand arguments in texts they give."
                 />
             </div>
-
         </section>
     );
 }

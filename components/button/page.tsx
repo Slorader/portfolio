@@ -1,11 +1,12 @@
 import { FaGithubSquare } from "react-icons/fa";
 import { PiReadCvLogo } from "react-icons/pi";
 import { FaLinkedin } from "react-icons/fa";
+import {MdOutlineEmail} from "react-icons/md";
 import { JSX } from "react";
 
 interface ButtonProps {
     label: string;
-    icon: 'github' | 'linkedin' | 'cv';
+    icon: 'github' | 'linkedin' | 'cv' | 'mail';
     link: string;
 }
 
@@ -14,6 +15,7 @@ const iconsMap: Record<ButtonProps['icon'], JSX.Element> = {
     github: <FaGithubSquare className={iconsStyle} fontSize={30} />,
     linkedin: <FaLinkedin className={iconsStyle} fontSize={30} />,
     cv: <PiReadCvLogo className={iconsStyle} fontSize={30} />,
+    mail: <MdOutlineEmail className={iconsStyle} fontSize={30} />,
 };
 
 export default function Button({ label, icon, link }: ButtonProps) {

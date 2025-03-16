@@ -3,6 +3,7 @@ import Navbar from "@/components/navbar/page";
 import Button from "@/components/button/page";
 import Career from "@/components/career/page";
 import Project from "@/components/project/page";
+import Footer from "@/components/footer/page";
 
 export default function Home() {
     return (
@@ -40,6 +41,7 @@ export default function Home() {
                 <span className="w-full h-[1px] bg-[#e1e5ea] mt-8 mb-8"></span>
                 <Project/>
                 <Career/>
+                <Footer/>
             </div>
         </>
     );
