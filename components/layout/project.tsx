@@ -1,4 +1,4 @@
-import Card from "@/components/card/page";
+import Card from "@/components/ui/card";
 
 const arguImage = {
     src: "/images/AR_notext.png",

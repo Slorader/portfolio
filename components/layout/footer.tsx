@@ -1,5 +1,5 @@
 import {MdLightMode} from "react-icons/md";
-import Contact from "@/components/contact/page";
+import Contact from "@/components/layout/contact";
 
 export default function Footer() {
     return (

@@ -1,8 +1,8 @@
-import Lang from "@/components/lang/page";
-import Navbar from "@/components/navbar/page";
-import Button from "@/components/button/page";
-import Career from "@/components/career/page";
-import Project from "@/components/project/page";
+import Lang from "@/components/ui/lang";
+import Navbar from "@/components/layout/navbar";
+import Button from "@/components/ui/button";
+import Career from "@/components/layout/career";
+import Project from "@/components/layout/project";
 
 export default function Home() {
     return (
