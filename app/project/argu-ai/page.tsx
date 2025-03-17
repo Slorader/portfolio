@@ -1,7 +1,6 @@
 import {FaCircleArrowLeft} from "react-icons/fa6";
 import Image from "next/image";
 import Link from "next/link";
-import Footer from "@/components/footer/page";
 
 export default function Page() {
     return (
@@ -68,7 +67,6 @@ export default function Page() {
                         dolorem eius facere facilis illo nesciunt, nulla numquam officia omnis quasi sit voluptas!
                     </li>
                 </div>
-                <Footer/>
             </div>
         </>
     );
