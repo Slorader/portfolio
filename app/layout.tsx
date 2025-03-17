@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.scss";
 import Scroll from "@/components/scroll/page";
+import Footer from "@/components/footer/page";
 
 export const metadata: Metadata = {
   title: "Léo TRUX - Portfolio",
@@ -15,11 +16,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-    <body
-    >
-    {children}
-    <Scroll/>
+    <body>
+    <div className="mx-auto max-w-150 z-2 flex flex-col justify-center">
+      {children}
+      <Scroll/>
+      <Footer/>
+    </div>
     </body>
     </html>
-  );
+);
 }
