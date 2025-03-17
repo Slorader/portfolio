@@ -1,4 +1,4 @@
-import Card from "@/components/card/page";
+import Card from "@/components/ui/card";
 
 const rguImage = {
     src: "/images/RGU.jpg",

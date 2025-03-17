@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.scss";
-import Scroll from "@/components/scroll/page";
-import Footer from "@/components/footer/page";
+import Scroll from "@/components/ui/scroll";
+import Footer from "@/components/layout/footer";
+import React from "react";
 
 export const metadata: Metadata = {
   title: "Léo TRUX - Portfolio",
