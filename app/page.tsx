@@ -1,5 +1,4 @@
 import Lang from "@/components/ui/lang";
-import Navbar from "@/components/layout/navbar";
 import Button from "@/components/ui/button";
 import Career from "@/components/layout/career";
 import Project from "@/components/layout/project";
@@ -8,7 +7,6 @@ export default function Home() {
     return (
         <>
             <Lang/>
-            <Navbar/>
             <div className="flex flex-row items-center mt-20 mb-5">
                 <div className="flex relative w-[24px] h-[24px]">
                       <span
