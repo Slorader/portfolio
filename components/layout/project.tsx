@@ -17,7 +17,7 @@ export default async function Project() {
             <h2 className="font-bold text-2xl mb-3">{t("projects.title")}</h2>
             <div className="flex flex-row gap-2">
                 <Card
-                    label={t("projects.argu_ai.label")}
+                    label="project"
                     link={t("projects.argu_ai.link")}
                     title={t("projects.argu_ai.title")}
                     image={arguImage}
