@@ -1,8 +1,9 @@
 import type {Metadata} from "next";
 import "./globals.scss";
 import Scroll from "@/components/ui/scroll";
-import React from "react";
+import React, {Suspense} from "react";
 import {Providers} from "@/app/[locale]/providers";
+import Loading from "@/app/[locale]/loading";
 
 export const metadata: Metadata = {
     title: "Léo TRUX - Portfolio",
@@ -16,13 +17,14 @@ export default async function RootLayout({children, params}: {
 }) {
     const {locale} = await params;
     return (
-
         <html lang="en">
         <body>
-        <div className="mx-auto max-w-150 z-2 flex flex-col justify-center">
-            <Providers local={locale}>{children}</Providers>
-            <Scroll/>
-        </div>
+        <Suspense fallback={<Loading />}>
+            <div className="mx-auto max-w-150 z-2 flex flex-col justify-center">
+                <Providers local={locale}>{children}</Providers>
+                <Scroll/>
+            </div>
+        </Suspense>
         </body>
         </html>
     );
