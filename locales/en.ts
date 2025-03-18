@@ -40,7 +40,6 @@ export default {
     projects: {
         title: "Projects",
         argu_ai: {
-            label: "Project",
             title: "Argu Ai",
             link: "/project/argu-ai",
             date: "2024",
