@@ -1,4 +1,5 @@
 import Card from "@/components/ui/card";
+import { getI18n } from "@/locales/server";
 
 const rguImage = {
     src: "/images/RGU.jpg",
@@ -14,44 +15,46 @@ const lyonImage = {
     width: 70,
     height: 20,
     className: "",
-}
+};
 
-export default function Career() {
+export default async function Career() {
+    const t = await getI18n();
+
     return (
         <>
             <section className="mb-10">
-                <h2 className="font-bold text-2xl mb-3">Career</h2>
+                <h2 className="font-bold text-2xl mb-3">{t("career.title")}</h2>
                 <Card
-                    label="CCSD"
+                    label={t("career.ccsd.label")}
                     link="https://www.ccsd.cnrs.fr/"
-                    title='Work-study Developer'
+                    title={t("career.ccsd.title")}
                     image={null}
-                    organisation="CCSD"
-                    date="2024 - Present"
-                    localisation="Lyon, France"
-                    description="I&#39;m working on the HALiance project."
+                    organisation={t("career.ccsd.organisation")}
+                    date={t("career.ccsd.date")}
+                    localisation={t("career.ccsd.location")}
+                    description={t("career.ccsd.description")}
                 />
                 <Card
-                    label="RGU"
+                    label={t("career.rgu.label")}
                     link="https://www.rgu.ac.uk/"
-                    title='Student Researcher'
+                    title={t("career.rgu.title")}
                     image={rguImage}
-                    organisation="Robert Gordon University"
-                    date="April 2024 - July 2024"
-                    localisation="Aberdeen, Scotland"
-                    description="I was working on the creation of AI models to automate the argumentative analysis processus."
+                    organisation={t("career.rgu.organisation")}
+                    date={t("career.rgu.date")}
+                    localisation={t("career.rgu.location")}
+                    description={t("career.rgu.description")}
                 />
             </section>
             <section className="mb-10">
-                <h2 className="font-bold text-2xl mb-3">Studies</h2>
+                <h2 className="font-bold text-2xl mb-3">{t("studies.title")}</h2>
                 <Card
-                    label="LYON"
+                    label={t("studies.lyon.label")}
                     link="https://www.univ-lyon1.fr/"
-                    title='Bachelor’s degree in Computer Science'
+                    title={t("studies.lyon.title")}
                     image={lyonImage}
-                    organisation="Claude Bernard Lyon 1 University"
-                    date="2022 - 2025"
-                    localisation="Bourg-en-Bresse, France"
+                    organisation={t("studies.lyon.organisation")}
+                    date={t("studies.lyon.date")}
+                    localisation={t("studies.lyon.location")}
                     description={null}
                 />
             </section>

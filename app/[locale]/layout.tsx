@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.scss";
 import Scroll from "@/components/ui/scroll";
-import Footer from "@/components/layout/footer";
 import React from "react";
+import {Providers} from "@/app/[locale]/providers";
 
 export const metadata: Metadata = {
   title: "Léo TRUX - Portfolio",
@@ -12,16 +12,19 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
+  params,
 }: Readonly<{
   children: React.ReactNode;
+  params: {
+    locale: string;
+  }
 }>) {
   return (
     <html lang="en">
     <body>
     <div className="mx-auto max-w-150 z-2 flex flex-col justify-center">
-      {children}
+      <Providers local={params.locale}>{children}</Providers>
       <Scroll/>
-      <Footer/>
     </div>
     </body>
     </html>
