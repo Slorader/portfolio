@@ -40,7 +40,7 @@ export default function Textarea({id, name, label}: TextareaProps) {
     }
 
     return (
-        <div className="relative w-full group">
+        <div className="relative w-full group mb-2">
             <textarea ref={inputRef}
                       id={id}
                       onChange={(e: ChangeEvent<HTMLTextAreaElement>) => setHasValue(e.target.value !== "")}
