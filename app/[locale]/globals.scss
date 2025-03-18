@@ -31,7 +31,6 @@
   }
 }
 
-
 body {
   background: var(--background);
   color: var(--foreground);
@@ -41,4 +40,19 @@ body {
 .active {
   background: var(--main-color);
   color: #ffffff;
+}
+
+.loader {
+  width: 15px;
+  height: 15px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  animation: l5 .5s infinite linear alternate;
+}
+
+@keyframes l5 {
+  0%  {box-shadow: 20px 0 var(--main-color), -20px 0 #0002;background: var(--main-color) }
+  33% {box-shadow: 20px 0 var(--main-color), -20px 0 #0002;background: #0002}
+  66% {box-shadow: 20px 0 #0002,-20px 0 var(--main-color); background: #0002}
+  100%{box-shadow: 20px 0 #0002,-20px 0 var(--main-color); background: var(--main-color) }
 }
