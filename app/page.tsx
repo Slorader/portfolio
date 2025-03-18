@@ -16,11 +16,11 @@ export default function Home() {
                 </div>
                 <p className="text-lg text-[var(--gray)] h-[24px]">Available for hire</p>
             </div>
-            <div className="flex flex-col text-7xl bold font-bold">
-                <span className="text-7xl bold font-bold">Hey, I&#39;m Léo</span>
+            <div className="flex flex-col text-6xl bold font-bold">
+                <span>Hey, I&#39;m Léo</span>
                 <div className="flex flex-row">
-                    <span className="text-7xl bold font-bold mr-4">a</span>
-                    <span className="text-7xl bold font-bold text-[var(--main-color)]">web developer.</span>
+                    <span className="mr-4">a</span>
+                    <span className="text-[var(--main-color)]">web developer.</span>
                 </div>
             </div>
             <div className="flex flex-row w-full">
