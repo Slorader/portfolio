@@ -8,7 +8,6 @@ interface ButtonProps {
 }
 
 export default function Button({id, name, label, isLoading}: ButtonProps) {
-
     return (
         <button
             type="submit"

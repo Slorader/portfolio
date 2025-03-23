@@ -26,20 +26,6 @@ export default function Textarea({id, name, label, isError, value = "", onChange
         }
     }
 
-    const handleFocus = () => {
-        setChangeBg(true);
-        console.log(1)
-    };
-
-    const handleBlur = () => {
-        setChangeBg(false);
-        console.log(2)
-    };
-
-    useEffect(() => {
-        console.log(changeBg);
-    }, [changeBg]);
-
     return (
         <div className="relative w-full group">
             <textarea
@@ -48,8 +34,8 @@ export default function Textarea({id, name, label, isError, value = "", onChange
                 onChange={handleChange}
                 className={` ${isError ? "border-[var(--form-error)]" : "border-[var(--main-color)] border-transparent "} resize-none z-20 relative w-full h-[200px] transition duration-300 ease-in-out border-2 border-solid  focus:border-2 focus:bg-white focus:border-[var(--main-color)] pt-7 pl-4 pr-8 rounded-[10px] outline-none bg-[var(--form-bg)]`}
                 name={name}
-                onFocus={handleFocus}
-                onBlur={handleBlur}
+                onFocus={() => setChangeBg(true)}
+                onBlurCapture={() => setChangeBg(false)}
                 {...register}
             />
             <label htmlFor={id}
