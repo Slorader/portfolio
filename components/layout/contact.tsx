@@ -9,8 +9,6 @@ import {useScopedI18n} from "@/locales/client";
 import {RiErrorWarningLine} from "react-icons/ri";
 import React, {useEffect, useState} from "react";
 
-
-
 export default function Contact() {
     const t = useScopedI18n('form');
     const [isLoading, setIsLoading] = useState(false);
@@ -33,9 +31,10 @@ export default function Contact() {
     const {
         register,
         handleSubmit,
-        formState: { errors },
+        setValue,
+        formState: {errors},
         reset,
-        watch
+        watch,
     } = useForm<FormSchema>({
         resolver: zodResolver(formSchema),
         defaultValues: {
@@ -70,12 +69,14 @@ export default function Contact() {
             setIsLoading(false);
         }
     };
-
+    const formValues = watch();
     useEffect(() => {
-        const subscription = watch((value) => console.log("Valeurs du formulaire (contact) :", value));
-        return () => subscription.unsubscribe();
-    }, [watch]);
+        console.log('Form Values:', formValues);
+    }, [formValues]);
 
+    const resetSpecificField = (field: "name" | "message" | "email") => {
+        setValue(field, "");
+    };
 
     return (
         <>
@@ -88,16 +89,38 @@ export default function Contact() {
                 )}
                 <div className="flex w-full gap-2">
                     <div className="flex flex-col w-1/2 mb-2">
-                        <Input id="name" type="text" {...register("name")} label={t("fields.name")} isError={!!errors.name}/>
-                        <span className={` ${errors.name ? "opacity-100" : "opacity-0" } text-[var(--form-error)] text-xs mb-1 mt-1 h-2`}>{errors.name?.message}</span>
+                        <Input id="name"
+                               type="text"
+                               {...register("name")}
+                               label={t("fields.name")}
+                               isError={!!errors.name}
+                               resetSpecificField={resetSpecificField}
+                        />
+                        <span
+                            className={` ${errors.name ? "opacity-100" : "opacity-0"} text-[var(--form-error)] text-xs mb-1 mt-1 h-2`}>{errors.name?.message}</span>
                     </div>
                     <div className="flex flex-col w-1/2">
-                        <Input id="email" type="text" {...register("email")} label={t("fields.email")} isError={!!errors.email}/>
-                        <span className={` ${errors.email ? "opacity-100" : "opacity-0" } text-[var(--form-error)] text-xs mb-1 mt-1 h-2`}>{errors.email?.message}</span>
+                        <Input
+                            id="email"
+                            type="text"
+                            {...register("email")}
+                            label={t("fields.email")}
+                            isError={!!errors.email}
+                            resetSpecificField={resetSpecificField}
+                        />
+                        <span
+                            className={` ${errors.email ? "opacity-100" : "opacity-0"} text-[var(--form-error)] text-xs mb-1 mt-1 h-2`}>{errors.email?.message}</span>
                     </div>
                 </div>
-                <Textarea id="message" {...register("message")} label={t("fields.message")} isError={!!errors.message}/>
-                <span className={` ${errors.message ? "opacity-100" : "opacity-0" } text-[var(--form-error)] text-xs mb-1  absolute mt-1 h-2`}>{errors.message?.message}</span>
+                <Textarea
+                    id="message"
+                    {...register("message")}
+                    label={t("fields.message")}
+                    isError={!!errors.message}
+                    resetSpecificField={resetSpecificField}
+                />
+                <span
+                    className={` ${errors.message ? "opacity-100" : "opacity-0"} text-[var(--form-error)] text-xs mb-1  absolute mt-1 h-2`}>{errors.message?.message}</span>
                 <Button id="button" name="button" label={t("fields.submit")} isLoading={isLoading}/>
             </form>
         </>
