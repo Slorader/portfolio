@@ -30,7 +30,7 @@ export default {
         title: "Études",
         lyon: {
             label: "Université Lyon 1",
-            title: "Licence en Informatique",
+            title: "BUT Informatique",
             organisation: "Université Claude Bernard Lyon 1",
             date: "2022 - 2025",
             location: "Bourg-en-Bresse, France",
@@ -54,10 +54,18 @@ export default {
         tech_stack: "Développé avec Next.js, déployé avec Vercel.",
     },
 
-    contact: {
-        name: "Nom",
-        email: "Email",
-        message: "Message",
-        submit: "Envoyer",
-    },
+    form: {
+        fields: {
+            name: "Nom",
+            email: "Email",
+            message: "Message",
+            submit: "Envoyer",
+        },
+        message: {
+            name: "Le nom doit contenir au moins 3 caractères.",
+            email: "Veuillez entrer une adresse e-mail valide.",
+            message: "Le message ne peut pas être vide.",
+        }
+    }
+
 } as const;
