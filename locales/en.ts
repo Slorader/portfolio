@@ -54,10 +54,19 @@ export default {
         tech_stack: "Developed with Next.js, deployed with Vercel.",
     },
 
-    contact: {
-        name: "Name",
-        email: "Email",
-        message: "Message",
-        submit: "Submit",
-    },
+
+    form: {
+        fields: {
+            name: "Name",
+            email: "Email",
+            message: "Message",
+            submit: "Submit",
+        },
+        message: {
+            name: "The name must contain at least 3 characters.",
+            email: "Please enter a valid e-mail address.",
+            message: "The message cannot be empty.",
+        }
+    }
+
 } as const;
