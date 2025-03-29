@@ -1,11 +1,18 @@
 import {NextRequest} from "next/server";
 import {Resend} from "resend";
+import {hasIp, storeIp} from "@/utils/ipCache";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
-
 export async function POST(request: NextRequest) {
-    const email = process.env.MY_EMAIL_ADDRESS;
+    const email: string|undefined = process.env.MY_EMAIL_ADDRESS;
     const dataForm = await request.json();
+
+    const ip: string = (request.headers.get('x-forwarded-for') ?? '127.0.0.1').split(',')[0]
+    if (hasIp(ip)) {
+        return Response.json("Please send your next message in one hour.", {status: 429});
+    }
+
+    storeIp(ip)
 
     if (!email) {
         return Response.json("Error with .env email");

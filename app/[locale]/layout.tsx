@@ -10,7 +10,6 @@ export const metadata: Metadata = {
     description: "Leo's Portfolio ",
 };
 
-
 export default async function RootLayout({children, params}: {
     children: React.ReactNode;
     params: Promise<{ locale: string }>

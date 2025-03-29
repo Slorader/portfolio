@@ -7,7 +7,7 @@ import Textarea from "@/components/ui/form/textarea";
 import Button from "@/components/ui/form/button";
 import {useScopedI18n} from "@/locales/client";
 import {RiErrorWarningLine} from "react-icons/ri";
-import React, {useEffect, useState} from "react";
+import React, {useState} from "react";
 
 export default function Contact() {
     const t = useScopedI18n('form');
@@ -33,8 +33,6 @@ export default function Contact() {
         handleSubmit,
         setValue,
         formState: {errors},
-        reset,
-        watch,
     } = useForm<FormSchema>({
         resolver: zodResolver(formSchema),
         defaultValues: {
@@ -56,10 +54,12 @@ export default function Contact() {
             });
 
             if (response.ok) {
-                reset();
+                console.log(response.json());
             } else {
                 setError("erreur lors de l'envoi");
             }
+
+
         } catch (error) {
             if (error instanceof Error) {
                 setError(error.message);
@@ -69,10 +69,6 @@ export default function Contact() {
             setIsLoading(false);
         }
     };
-    const formValues = watch();
-    useEffect(() => {
-        console.log('Form Values:', formValues);
-    }, [formValues]);
 
     const resetSpecificField = (field: "name" | "message" | "email") => {
         setValue(field, "");
