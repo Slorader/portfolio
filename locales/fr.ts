@@ -66,6 +66,20 @@ export default {
             email: "Veuillez entrer une adresse e-mail valide.",
             message: "Le message ne peut pas être vide.",
         }
-    }
+    },
+
+    modal: {
+        title: "Statut du formulaire",
+        error: {
+            subTitle: "Veuillez me contacter plus tard.",
+            message: "Pour éviter le spam de messages, vous pourrez me contacter à nouveau dans une heure.",
+            button: "Je comprends",
+        },
+        success: {
+            subTitle: "Merci de m'avoir contacté !",
+            message: "Un email m'a été envoyé, je vous réponds au plus vite.",
+            button: "Retour",
+        },
+    },
 
 } as const;

@@ -6,13 +6,27 @@ import Input from "@/components/ui/form/input";
 import Textarea from "@/components/ui/form/textarea";
 import Button from "@/components/ui/form/button";
 import {useScopedI18n} from "@/locales/client";
-import {RiErrorWarningLine} from "react-icons/ri";
 import React, {useState} from "react";
+import Modal from "@/components/ui/modal";
+
+const successImage = {
+    src: "/images/email.webp",
+    alt: "email",
+};
+
+const errorImage = {
+    src: "/images/clock.webp",
+    alt: "clock",
+}
 
 export default function Contact() {
     const t = useScopedI18n('form');
+    const tm = useScopedI18n('modal');
     const [isLoading, setIsLoading] = useState(false);
-    const [error, setError] = useState<string | null>(null);
+    const [error, setError] = useState(false);
+    const [success, setSuccess] = useState(false);
+    const [isOpen, setIsOpen] = useState<boolean>(false);
+
 
     const formSchema = z.object({
         name: z.string().min(3, {
@@ -44,7 +58,7 @@ export default function Contact() {
 
     const onSubmit = async (data: FormSchema) => {
         setIsLoading(true);
-        setError(null);
+        setError(false);
 
         try {
             const response = await fetch("/api/resend", {
@@ -54,19 +68,18 @@ export default function Contact() {
             });
 
             if (response.ok) {
-                console.log(response.json());
+                setSuccess(true);
             } else {
-                setError("erreur lors de l'envoi");
+                setError(true);
             }
-
 
         } catch (error) {
             if (error instanceof Error) {
-                setError(error.message);
                 console.error(error);
             }
         } finally {
             setIsLoading(false);
+            setIsOpen(true);
         }
     };
 
@@ -74,15 +87,34 @@ export default function Contact() {
         setValue(field, "");
     };
 
+    const closeModal = () => {
+        setError(false);
+        setSuccess(false);
+        setIsOpen(false);
+    }
+
     return (
         <>
+
             <form className="relative" onSubmit={handleSubmit(onSubmit)}>
-                {error && (
-                    <div className="absolute z-2 -top-8 flex w-full items-center">
-                        <RiErrorWarningLine className="mr-2 text-red-500" size={25}/>
-                        <span className="text-red-500 mt-1">{error}</span>
-                    </div>
-                )}
+                {error && (<Modal
+                    image={errorImage}
+                    title={tm('title')}
+                    subTitle={tm('error.subTitle')}
+                    message={tm('error.message')}
+                    buttonLabel={tm('error.button')}
+                    isOpen={isOpen}
+                    closeModal={closeModal}
+                />)}
+                {success && (<Modal
+                    image={successImage}
+                    title={tm('title')}
+                    subTitle={tm('success.subTitle')}
+                    message={tm('success.message')}
+                    buttonLabel={tm('success.button')}
+                    isOpen={isOpen}
+                    closeModal={closeModal}
+                />)}
                 <div className="flex w-full gap-2">
                     <div className="flex flex-col w-1/2 mb-2">
                         <Input id="name"
