@@ -33,7 +33,7 @@ export default function Input({id, name, type, label, isError, value = "", reset
     }
 
     function removeValue(): void {
-        resetSpecificField(id === "name" ? "name" : "message");
+        resetSpecificField(id === "name" ? "name" : "email");
         setHasValue(false);
         setInputValue("");
     }
