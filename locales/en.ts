@@ -67,6 +67,20 @@ export default {
             email: "Please enter a valid e-mail address.",
             message: "The message cannot be empty.",
         }
-    }
+    },
+
+    modal: {
+        title: "Form Status",
+        error: {
+            subTitle: "Please contact me later.",
+            message: "To avoid message spamming, you will be able to contact me again in one hour.",
+            button: "I understand",
+        },
+        success: {
+            subTitle: "Thank you for contacting me!",
+            message: "An email has been sent to me, I will reply as soon as possible.",
+            button: "Back",
+        },
+    },
 
 } as const;

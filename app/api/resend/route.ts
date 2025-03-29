@@ -3,8 +3,9 @@ import {Resend} from "resend";
 import {hasIp, storeIp} from "@/utils/ipCache";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
+
 export async function POST(request: NextRequest) {
-    const email: string|undefined = process.env.MY_EMAIL_ADDRESS;
+    const email: string | undefined = process.env.MY_EMAIL_ADDRESS;
     const dataForm = await request.json();
 
     const ip: string = (request.headers.get('x-forwarded-for') ?? '127.0.0.1').split(',')[0]
