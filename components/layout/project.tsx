@@ -9,13 +9,31 @@ const arguImage = {
     className: "mb-10",
 };
 
+const leitlearnImage = {
+    src: "/images/LeitlearnSocial.png",
+    alt: "leitlearn",
+    width: 35,
+    height: 35,
+    className: "mb-10",
+}
+
 export default async function Project() {
     const t = await getI18n();
 
     return (
         <section className="mb-10">
             <h2 className="font-bold text-2xl mb-3">{t("projects.title")}</h2>
-            <div className="flex flex-row gap-2">
+            <div className="flex flex-col gap-2">
+                <Card
+                    label="project"
+                    link={t("projects.leitlearn.link")}
+                    title={t("projects.leitlearn.title")}
+                    image={leitlearnImage}
+                    organisation={null}
+                    date={t("projects.leitlearn.date")}
+                    localisation={null}
+                    description={t("projects.leitlearn.description")}
+                />
                 <Card
                     label="project"
                     link={t("projects.argu_ai.link")}

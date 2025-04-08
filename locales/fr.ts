@@ -45,6 +45,12 @@ export default {
             date: "2024",
             description: "Argu Ai est une plateforme qui aide les utilisateurs à comprendre les arguments dans les textes qu'ils soumettent.",
         },
+        leitlearn: {
+            title: "Leitlearn",
+            link: "/project/leitlearn",
+            date: "2025",
+            description: "Leitlearn est une plateforme d'apprentissage en ligne permettant aux utilisateurs d'acquérir des connaissances en utilisant des flashcards."
+        }
     },
 
     footer: {
