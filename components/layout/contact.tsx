@@ -95,7 +95,6 @@ export default function Contact() {
 
     return (
         <>
-
             <form className="relative" onSubmit={handleSubmit(onSubmit)}>
                 {error && (<Modal
                     image={errorImage}

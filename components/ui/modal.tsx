@@ -3,7 +3,6 @@ import {motion} from "framer-motion";
 import Image from "next/image";
 import {JSX, useEffect} from "react";
 
-
 interface ModalProps {
     image: {
         src: string,
@@ -56,7 +55,7 @@ export default function Modal({image, title, subTitle, message, buttonLabel, isO
                            width="120"
                            height="120"
                            alt={image.alt}
-                           className="mb-5"
+                           className="mb-5 select-none"
                     />
                     <span className="text-3xl font-bold mb-4 text-center">{subTitle}</span>
                     <span className="text-center text-[var(--gray)]">{message}</span>

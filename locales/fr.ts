@@ -1,10 +1,10 @@
 export default {
-    available_for_hire: "Disponible pour embauche",
-    hello: "Hey, je suis Léo",
-    a: "un",
-    web_developer: "développeur web.",
-    intro: "Je m'appelle Léo TRUX, et je suis un développeur web français passionné par la création de sites web. Actuellement en dernière année d'un diplôme en informatique à l'Université Lyon 1.",
-    skills: "J'ai une solide expérience en PHP, notamment avec le framework Symfony. J'élargis actuellement mes compétences en apprenant Next.js et Docker, afin de maîtriser les technologies modernes pour le développement fullstack.",
+    home: {
+        available_for_hire: "Disponible pour embauche",
+        web_developer: "Développeur web.",
+        intro: "Je m'appelle Léo Trux, et je suis un développeur français passionné par la création d'applications. Actuellement en dernière année d'un diplôme en informatique à l'Université Lyon 1.",
+        skills: "J'ai une solide expérience en PHP, notamment avec le framework Symfony. J'élargis actuellement mes compétences en apprenant Next.js et Docker, afin de maîtriser les technologies modernes pour le développement fullstack.",
+    },
 
     career: {
         title: "Parcours professionnel",
@@ -81,5 +81,26 @@ export default {
             button: "Retour",
         },
     },
+    back_btn: "Retour à la page d'accueil",
+    docs_title: "Documents liés au projet",
+    argu_ai: {
+        intro: "ArguAI est une plateforme en ligne que j’ai eu la chance de développer durant mon stage de 10 semaines en deuxième année de BUT. Elle automatise le processus d’analyse argumentative grâce à des modèles d’intelligence artificielle.",
+        s1: {
+            title: "Contexte du projet",
+            p1: "Ce projet a été réalisé dans le cadre de mon stage de deuxième année de BUT Informatique, d’une durée de 10 semaines. J’ai été chargé de concevoir et de développer seul une plateforme web nommée ArguAI, permettant l’analyse automatique d’arguments à partir de textes, à l’aide de modèles d’intelligence artificielle.",
+            p2: "L’objectif principal était de créer un outil capable d’analyser un raisonnement argumentatif dans un texte, d’en extraire les composantes (position, arguments, contre-arguments, etc.) et de les présenter de manière lisible et structurée à l’utilisateur."
+        },
+        s2: {
+            title: "Mise en œuvre technique",
+            p1: "Le projet repose sur une architecture web complète, combinant une interface développée en React avec le framework Next.js et une API backend construite avec Flask en Python. Le frontend offre une navigation fluide et une interface responsive grâce à l’utilisation de Tailwind CSS. Le backend, quant à lui, gère la logique métier et l’appel aux trois modèles d’intelligence artificielle développés pour analyser automatiquement la structure argumentative des textes. Les échanges entre les deux parties se font via des requêtes HTTP, permettant une communication efficace entre l’interface utilisateur et les traitements réalisés par les modèles IA.",
+        },
+        s3: {
+            title: "Utilisation des modèles d'IA",
+            p1: "Dans le cadre de l'automatisation du processus d'analyse argumentative, plusieurs modèles d'intelligence artificielle ont été utilisés pour traiter et analyser les textes de manière structurée. Tout d'abord, j'ai utilisé la bibliothèque Spacy accompagnée du modèle en_core_web_sm pour la segmentation du texte. Ce modèle permet de diviser un texte en segments significatifs, comme des phrases ou des unités de sens, ce qui est essentiel pour comprendre la structure générale de l'argumentation.",
+            p2: "Ensuite, pour identifier le type de chaque segment (par exemple, conclusion ou sous-conclusion), j'ai employé un classificateur RandomForest. Ce modèle a été entraîné pour reconnaître les différents types de segments dans l'argumentation, ce qui permet d'analyser plus précisément la construction argumentative et d'identifier les différentes parties du raisonnement.",
+            p3: "Enfin, pour analyser les relations entre les segments, j'ai utilisé DistilBert, un modèle de langage de type transformer. DistilBert est capable de déterminer quelles propositions soutiennent d'autres et quel est le type de relation entre elles, qu'il s'agisse de soutien, de contradiction, ou d'une autre forme de lien argumentatif. Ce modèle permet donc d'apporter une couche supplémentaire d'analyse, en comprenant les interactions complexes entre les différentes parties d'un argument. Si vous souhaitez plus de détails sur ce projet, un rapport de stage est disponible en bas de la page.",
+        },
+        intership_report: "Rapport de stage"
+    }
 
 } as const;

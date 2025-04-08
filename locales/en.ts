@@ -1,11 +1,10 @@
 export default {
-    available_for_hire: "Available for hire",
-    hello: "Hey, I'm Léo",
-    a: "a",
-    web_developer: "web developer.",
-    intro: "My name is Léo TRUX, and I am a web developer from France with a passion for website development. I'm currently in my final year of a computer science degree at Lyon 1 University.",
-    skills: "I have a solid experience in PHP, particularly with the Symfony framework. I'm currently broadening my skills by learning Next.js and Docker, to master modern technologies for fullstack development.",
-
+    home: {
+        available_for_hire: "Available for hire",
+        web_developer: "Web developer.",
+        intro: "My name is Léo Trux, and I am a developer from France with a passion for application development. I'm currently in my final year of a computer science degree at Lyon 1 University.",
+        skills: "I have a solid experience in PHP, particularly with the Symfony framework. I'm currently broadening my skills by learning Next.js and Docker, to master modern technologies for fullstack development.",
+    },
     career: {
         title: "Career",
         ccsd: {
@@ -82,5 +81,26 @@ export default {
             button: "Back",
         },
     },
+    back_btn: "Back to the home page",
+    docs_title: "Project documents",
+    argu_ai: {
+        intro: "ArguAI is an online platform that I had the chance to develop during my 10-week internship in my second year of my Bachelor's degree in Computer Science. It automates the process of argumentative analysis using artificial intelligence models.",
+        s1: {
+            title: "Project Context",
+            p1: "This project was done as part of my second-year internship in Computer Science, lasting 10 weeks. I was tasked with designing and developing a web platform called ArguAI, which allows the automatic analysis of arguments from texts, using artificial intelligence models.",
+            p2: "The main goal was to create a tool capable of analyzing an argumentative reasoning in a text, extracting its components (position, arguments, counterarguments, etc.) and presenting them in a readable and structured way to the user."
+        },
+        s2: {
+            title: "Technical Implementation",
+            p1: "The project relies on a complete web architecture, combining a frontend developed in React with the Next.js framework and a backend API built with Flask in Python. The frontend provides smooth navigation and a responsive interface thanks to the use of Tailwind CSS. The backend manages the business logic and calls the three artificial intelligence models developed to automatically analyze the argumentative structure of texts. Communication between the two parts is done via HTTP requests, allowing efficient interaction between the user interface and the processing done by the AI models."
+        },
+        s3: {
+            title: "Use of AI Models",
+            p1: "As part of automating the argumentative analysis process, several artificial intelligence models were used to process and analyze texts in a structured manner. First, I used the Spacy library along with the en_core_web_sm model for text segmentation. This model breaks down a text into meaningful segments, such as sentences or units of meaning, which is essential for understanding the overall structure of the argument.",
+            p2: "Next, to identify the type of each segment (e.g., conclusion or sub-conclusion), I used a RandomForest classifier. This model was trained to recognize the different types of segments in the argumentation, allowing for more precise analysis of the argumentative structure and identifying the different parts of the reasoning.",
+            p3: "Finally, to analyze the relationships between the segments, I used DistilBert, a transformer-type language model. DistilBert is capable of determining which propositions support others and what type of relationship exists between them, whether it be support, contradiction, or another form of argumentative link. This model thus adds an additional layer of analysis by understanding the complex interactions between the different parts of an argument. If you would like more details on this project, an internship report is available at the bottom of the page."
+        },
+        intership_report: "Intership report"
+    }
 
 } as const;
