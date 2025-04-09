@@ -107,6 +107,18 @@ export default {
             p3: "Finally, to analyze the relationships between the segments, I used DistilBert, a transformer-type language model. DistilBert is capable of determining which propositions support others and what type of relationship exists between them, whether it be support, contradiction, or another form of argumentative link. This model thus adds an additional layer of analysis by understanding the complex interactions between the different parts of an argument. If you would like more details on this project, an internship report is available at the bottom of the page."
         },
         intership_report: "Intership report"
+    },
+    leitlearn: {
+        intro: "LeitLearn is an online learning platform that allows users to gain knowledge while having fun. The concept is based on the use of flashcards—virtual two-sided cards with a question on one side and the answer on the other—promoting active and enjoyable memorization. Users can create, customize, and review their own cards, making learning interactive, motivating, and effective.",
+        s1: {
+            title: "Project Background",
+            p1: "The LeitLearn project began at the start of 2023. Originally, it was an academic project lasting one year, with the goal of designing and developing a web application from scratch. We started development as a team of three, initially using native PHP, before migrating to the CakePHP framework to better structure our code and support the application’s evolution."
+        },
+        s2: {
+            title: "Technical Implementation",
+            p1: "The LeitLearn website is built with Next.js, deployed on Vercel, and uses TypeScript and React. This technological stack reflects our shared intention to work with modern tools from the JavaScript ecosystem, while allowing us to learn and become familiar with recent and widely used web development technologies.",
+            p2: "To effectively organize our teamwork, we adopted an agile methodology. Each task was defined through the creation of tickets, then developed in a dedicated branch via a pull request. Every feature was then reviewed by another team member before being merged, which helped ensure the project’s quality while fostering technical exchange and collective skill development.",
+        },
+        team: "The Team"
     }
-
 } as const;

@@ -107,6 +107,18 @@ export default {
             p3: "Enfin, pour analyser les relations entre les segments, j'ai utilisé DistilBert, un modèle de langage de type transformer. DistilBert est capable de déterminer quelles propositions soutiennent d'autres et quel est le type de relation entre elles, qu'il s'agisse de soutien, de contradiction, ou d'une autre forme de lien argumentatif. Ce modèle permet donc d'apporter une couche supplémentaire d'analyse, en comprenant les interactions complexes entre les différentes parties d'un argument. Si vous souhaitez plus de détails sur ce projet, un rapport de stage est disponible en bas de la page.",
         },
         intership_report: "Rapport de stage"
+    },
+    leitlearn: {
+        intro: "LeitLearn est une plateforme d’apprentissage en ligne qui permet aux utilisateurs d’acquérir des connaissances tout en s’amusant. Le principe repose sur l’utilisation de flashcards, des cartes virtuelles recto-verso avec une question d’un côté et la réponse de l’autre, favorisant la mémorisation active et ludique. Les utilisateurs peuvent créer, personnaliser et réviser leurs propres cartes, rendant l’apprentissage interactif, motivant et efficace.",
+        s1: {
+            title: "Contexte du projet",
+            p1: "Le projet Leitlearn a débuté au début de l’année 2023. À l’origine, il s’agissait d’un projet académique d’une durée d’un an, dont l’objectif était de concevoir et développer une application web de A à Z. Nous avons démarré le développement en équipe de trois personnes, d’abord en PHP natif, avant de migrer vers le framework CakePHP pour structurer davantage notre code et faciliter l’évolution de l’application."
+        },
+        s2: {
+            title: "Mise en œuvre technique",
+            p1: "Le site web Leitlearn est développé avec Next.js, déployé sur Vercel, et repose sur l’utilisation de TypeScript et React. Ce choix technologique reflète notre volonté commune d’utiliser des outils modernes de l’écosystème JavaScript, tout en nous permettant d’apprendre et de nous familiariser avec des technologies récentes et largement utilisées dans le développement web actuel.",
+            p2: "Afin de structurer efficacement notre travail en équipe, nous avons mis en place une méthodologie agile. Chaque tâche était définie à travers la création de tickets, puis développée dans une branche dédiée via une pull request. Chaque fonctionnalité faisait ensuite l’objet d’une relecture de code par un autre membre de l’équipe avant d’être intégrée, ce qui a permis d’assurer la qualité du projet tout en favorisant les échanges techniques et la montée en compétences collective.",
+        },
+        team: "L'équipe"
     }
-
 } as const;

@@ -1,10 +1,10 @@
-import { getI18n } from "@/locales/server";
-import { FaCircleArrowLeft } from "react-icons/fa6";
+import {getI18n} from "@/locales/server";
+import {FaCircleArrowLeft} from "react-icons/fa6";
 import Image from "next/image";
 import Link from "next/link";
 import Footer from "@/components/layout/footer";
-import Button from "@/components/ui/button";
 import React from "react";
+import Team from "@/components/ui/team";
 
 export default async function Page() {
     const t = await getI18n();
@@ -23,31 +23,29 @@ export default async function Page() {
                     <h1 className="text-7xl bold font-bold">Leitlearn</h1>
                 </div>
                 <p className="mt-10 text-[var(--gray)]">
-                    {t('argu_ai.intro')}
+                    {t('leitlearn.intro')}
                 </p>
-                <Image src="/images/AR_white.png" alt="arguailogo" width={1000} height={400}
-                       className="bg-[#0f2145] w-full mt-10 p-10 rounded-[20px]"/>
+                <Image src="/images/leitlearnblue.png" alt="leitlearn text" width={1000} height={400}
+                       className="w-full mt-10 rounded-[20px]"/>
                 <div className="flex flex-col mt-10">
-                    <h2 className="text-3xl bold font-bold mb-3">{t('argu_ai.s1.title')}</h2>
-                    <li className="ml-4 mb-5 text-[var(--gray)]">{t('argu_ai.s1.p1')}</li>
-                    <li className="ml-4 text-[var(--gray)]">{t('argu_ai.s1.p2')}</li>
+                    <h2 className="text-3xl bold font-bold mb-3">{t('leitlearn.s1.title')}</h2>
+                    <li className="ml-4 mb-5 text-[var(--gray)]">
+                        {t('leitlearn.s1.p1')}
+                    </li>
                 </div>
                 <div className="flex flex-col mt-10">
-                    <h2 className="text-3xl bold font-bold mb-3">{t('argu_ai.s2.title')}</h2>
-                    <li className="ml-4 mb-5 text-[var(--gray)]">{t('argu_ai.s2.p1')}</li>
+                    <h2 className="text-3xl bold font-bold mb-3">{t('leitlearn.s2.title')}</h2>
+                    <li className="ml-4 mb-5 text-[var(--gray)]">
+                        {t('leitlearn.s2.p1')}
+                    </li>
+                    <li className="ml-4 mb-5 text-[var(--gray)]">
+                        {t('leitlearn.s2.p2')}
+                    </li>
                 </div>
                 <div className="flex flex-col mt-10">
-                    <h2 className="text-3xl bold font-bold mb-3">{t('argu_ai.s3.title')}</h2>
-                    <li className="ml-4 mb-5 text-[var(--gray)]">{t('argu_ai.s3.p1')}</li>
-                    <li className="ml-4 mb-5 text-[var(--gray)]">{t('argu_ai.s3.p2')}</li>
-                    <li className="ml-4 mb-5 text-[var(--gray)]">{t('argu_ai.s3.p3')}</li>
-                </div>
-                <div className="flex flex-col mt-10">
-                    <h2 className="text-3xl bold font-bold">{t('docs_title')}</h2>
-                    <div className="flex flex-row w-full">
-                        <Button label="Github" icon="github" link="https://github.com/Slorader/arguAi"/>
-                        <Button label={t('argu_ai.intership_report')} icon="cv" link="/docs/rapport_trux_final.pdf"/>
-                    </div>
+                    <h2 className="text-3xl bold font-bold mb-5">{t('leitlearn.team')}
+                    </h2>
+                    <Team/>
                 </div>
                 <Footer/>
             </div>
