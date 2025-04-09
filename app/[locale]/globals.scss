@@ -10,13 +10,6 @@
   --form-error : #CA024F
 }
 
-@font-face {
-  font-family: 'RM Neue';
-  src: url('/public/fonts/RMNeueTRIAL-Regular.otf') format('opentype');
-  font-weight: normal;
-  font-style: normal;
-}
-
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);

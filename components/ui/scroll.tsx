@@ -22,9 +22,9 @@ export default function ScrollToTop() {
         <div
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             className={`fixed right-10 w-10 h-10 flex items-center justify-center 
-        rounded-[20px] text-white bg-[var(--main-color)] cursor-pointer
+        rounded-[2rem] text-white bg-[var(--main-color)] cursor-pointer
         hover:scale-110 active:scale-95 transition-all duration-500 ease-in-out
-        ${isVisible ? "bottom-10 opacity-100" : "bottom-[-50px] opacity-0"}
+        ${isVisible ? "bottom-10 opacity-100" : "bottom-[-1rem] opacity-0"}
       `}
         >
             <FaArrowUp fontSize={15} />
