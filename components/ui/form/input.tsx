@@ -53,12 +53,12 @@ export default function Input({id, name, type, label, isError, value = "", reset
             />
             <label
                 htmlFor={id}
-                className={`${hasValue ? "top-4 text-xs" : ""} z-20 group-focus-within:text-xs group-focus-within:top-4 text-[#5e6a83] absolute left-0 top-1/2 transform -translate-y-1/2 pl-4 transition-all duration-300 ease-in-out`}>
+                className={`${hasValue ? "top-4 text-xs" : ""} z-20 group-focus-within:text-xs group-focus-within:top-4 text-[var(--dark-gray)] absolute left-0 top-1/2 transform -translate-y-1/2 pl-4 transition-all duration-300 ease-in-out`}>
                 {label}
             </label>
             <IoMdClose fontSize={25}
                        onClick={removeValue}
-                       className={` ${displayIcon ? "z-50" : "z-10"} absolute right-3 top-1/2 transform -translate-y-1/2 text-[#5e6a83] cursor-pointer transition duration-300 ease-in-out opacity-0 group-focus-within:opacity-100`}
+                       className={` ${displayIcon ? "z-50" : "z-10"} absolute right-3 top-1/2 transform -translate-y-1/2 text-[var(--dark-gray)] cursor-pointer transition duration-300 ease-in-out opacity-0 group-focus-within:opacity-100`}
             />
         </div>
     );

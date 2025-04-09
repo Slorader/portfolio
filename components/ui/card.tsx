@@ -31,7 +31,7 @@ export default function Card({label, link, title, image, organisation, date, loc
     return (
         <>
             <Link href={link}
-               className="active:scale-95 relative flex w-full group transition duration-300 ease-in-out hover:border-[var(--main-color)] rounded-[.5rem] border-2 border-solid border-[#e1e5ea] p-4 mb-5">
+               className="active:scale-95 relative flex w-full group transition duration-300 ease-in-out hover:border-[var(--main-color)] rounded-[.5rem] border-2 border-solid border-[var(--border-gray)] p-4 mb-5">
                 {label === 'CCSD' ? (
                     <div>
                         <svg width="80" height="26" viewBox="0 0 167 26" fill="none"

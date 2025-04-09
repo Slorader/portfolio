@@ -33,7 +33,7 @@ export default async function Home() {
             </div>
             <p className="mt-10 text-[var(--gray)]">{t('home.intro')}</p>
             <p className="mt-4 text-[var(--gray)]">{t('home.skills')}</p>
-            <span className="w-full h-[1px] bg-[#e1e5ea] mt-8 mb-8"></span>
+            <span className="w-full h-[1px] bg-[var(--border-gray)] mt-8 mb-8"></span>
             <Project/>
             <Career/>
             <Footer/>

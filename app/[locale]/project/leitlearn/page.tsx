@@ -17,7 +17,9 @@ export default async function Page() {
                         className="group-hover:text-[var(--main-color)] transition duration-300 ease-in-out mr-3"
                         fontSize={20}/>
                     <span
-                        className="group-hover:text-[var(--main-color)] transition duration-300 ease-in-out text-lg text-[var(--gray)] h-[24px]">{t('back_btn')}</span>
+                        className="group-hover:text-[v
+
+                        ar(--main-color)] transition duration-300 ease-in-out text-lg text-[var(--gray)] h-[24px]">{t('back_btn')}</span>
                 </Link>
                 <div className="flex flex-col text-7xl bold font-bold">
                     <h1 className="text-7xl bold font-bold">Leitlearn</h1>
@@ -26,7 +28,7 @@ export default async function Page() {
                     {t('leitlearn.intro')}
                 </p>
                 <Image src="/images/leitlearnblue.png" alt="leitlearn text" width={1000} height={400}
-                       className="w-full mt-10 rounded-[20px]"/>
+                       className="w-full mt-10 rounded-[0.5rem]"/>
                 <div className="flex flex-col mt-10">
                     <h2 className="text-3xl bold font-bold mb-3">{t('leitlearn.s1.title')}</h2>
                     <li className="ml-4 mb-5 text-[var(--gray)]">

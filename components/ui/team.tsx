@@ -7,7 +7,7 @@ export default function Team() {
         <div className="flex relative h-30">
             <Link
                 href='https://www.linkedin.com/in/leo-trux/'
-                className="absolute z-40 rounded-[4rem] cursor-pointer transition duration-300 ease-in-out hover:border-[var(--main-color)] border-2 border-[#e1e5ea]"
+                className="absolute z-40 rounded-[4rem] cursor-pointer transition duration-300 ease-in-out hover:border-[var(--main-color)] border-2 border-[var(--border-gray)]"
             >
                 <Image
                     src='/images/leotrux.jpg'
@@ -20,7 +20,7 @@ export default function Team() {
             </Link>
             <Link
                 href='https://www.linkedin.com/in/kilianpeyron/'
-                className="absolute z-30 left-25 rounded-[4rem] cursor-pointer transition duration-300 ease-in-out hover:border-[var(--main-color)] border-2 border-[#e1e5ea]"
+                className="absolute z-30 left-25 rounded-[4rem] cursor-pointer transition duration-300 ease-in-out hover:border-[var(--main-color)] border-2 border-[var(--border-gray)]"
             >
                 <Image
                     src='/images/kilianpeyron.jpg'
@@ -33,7 +33,7 @@ export default function Team() {
             </Link>
             <Link
                 href='https://www.linkedin.com/in/aiman-manchout/'
-                className="absolute z-20 rounded-[4rem] left-50 cursor-pointer transition duration-300 ease-in-out hover:border-[var(--main-color)] border-2 border-[#e1e5ea]"
+                className="absolute z-20 rounded-[4rem] left-50 cursor-pointer transition duration-300 ease-in-out hover:border-[var(--main-color)] border-2 border-[var(--border-gray)]"
             >
                 <Image
                     src='/images/aimanmanchout.jpg'

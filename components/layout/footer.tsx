@@ -6,7 +6,7 @@ export default async function Footer() {
 
     return (
         <div className="flex flex-col w-full mt-20">
-            <span className="w-full h-[1px] bg-[#e1e5ea]"></span>
+            <span className="w-full h-[1px] bg-[var(--border-gray)]"></span>
             <span className="text-5xl font-bold mt-10 mb-5">
                 {t("footer.collaborate")}
             </span>

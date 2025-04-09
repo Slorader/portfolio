@@ -17,7 +17,7 @@ export default async function Page() {
                         className="group-hover:text-[var(--main-color)] transition duration-300 ease-in-out mr-3"
                         fontSize={20}/>
                     <span
-                        className="group-hover:text-[var(--main-color)] transition duration-300 ease-in-out text-lg text-[var(--gray)] h-[24px]">{t('back_btn')}</span>
+                        className="group-hover:text-[var(--main-color)] transition duration-300 ease-in-out text-lg text-[var(--gray)]">{t('back_btn')}</span>
                 </Link>
                 <div className="flex flex-col text-7xl bold font-bold">
                     <h1 className="text-7xl bold font-bold">Argu Ai</h1>
@@ -26,7 +26,7 @@ export default async function Page() {
                     {t('argu_ai.intro')}
                 </p>
                 <Image src="/images/AR_white.png" alt="arguailogo" width={1000} height={400}
-                       className="bg-[#0f2145] w-full mt-10 p-10 rounded-[20px]"/>
+                       className="bg-[var(--foreground)] w-full mt-10 p-10 rounded-[0.5rem]"/>
                 <div className="flex flex-col mt-10">
                     <h2 className="text-3xl bold font-bold mb-3">{t('argu_ai.s1.title')}</h2>
                     <li className="ml-4 mb-5 text-[var(--gray)]">{t('argu_ai.s1.p1')}</li>

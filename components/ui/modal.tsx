@@ -42,11 +42,11 @@ export default function Modal({image, title, subTitle, message, buttonLabel, isO
                 transition={{duration: 0.3, ease: "easeOut"}}
                 className="w-150 z-60 bg-white h-125 bg-red-200 rounded-xl"
             >
-                <div className="relative flex p-5 border-b border-[#e1e5ea] items-center">
+                <div className="relative flex p-5 border-b border-[var(--border-gray)] items-center">
                     <span
                         className="absolute left-1/2 -translate-x-1/2 text-center mt-1 font-semibold">{title}</span>
                     <IoMdClose fontSize={25}
-                               className="mr-auto text-[#5e6a83] cursor-pointer transition duration-300 ease-in-out rounded-[1rem] hover:bg-[#e1e5ea]"
+                               className="mr-auto text-[var(--dark-gray)] cursor-pointer transition duration-300 ease-in-out rounded-[1rem] hover:bg-[var(--border-gray)]"
                                onClick={closeModal}
                     />
                 </div>
@@ -61,7 +61,7 @@ export default function Modal({image, title, subTitle, message, buttonLabel, isO
                     <span className="text-center text-[var(--gray)]">{message}</span>
                     <button
                         onClick={closeModal}
-                        className="active:scale-95 absolute -bottom-20 w-full transition duration-300 ease-in-out flex items-center cursor-pointer bg-gradient-to-br text-white font-bold from-[#3e31fa] to-[#825df6] rounded-[.5rem] w-50 justify-center px-5 h-15">
+                        className="active:scale-95 absolute -bottom-20 w-full transition duration-300 ease-in-out flex items-center cursor-pointer bg-gradient-to-br text-white font-bold from-[var(--main-color)] to-[#825df6] rounded-[.5rem] w-50 justify-center px-5 h-15">
                         {buttonLabel}
                     </button>
                 </div>
