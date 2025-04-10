@@ -17,7 +17,7 @@ export default async function Page() {
                         className="group-hover:text-[var(--main-color)] transition duration-300 ease-in-out mr-3"
                         fontSize={20}/>
                     <span
-                        className="group-hover:text-[var(--main-color)] transition duration-300 ease-in-out text-lg text-[var(--gray)]">{t('back_btn')}</span>
+                        className="group-hover:text-[var(--main-color)] transition duration-300 ease-in-out text-lg text-[var(--gray)] h-[24px]">{t('back_btn')}</span>
                 </Link>
                 <div className="flex flex-col text-7xl bold font-bold">
                     <h1 className="text-7xl bold font-bold">Argu Ai</h1>

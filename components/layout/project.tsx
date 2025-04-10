@@ -12,9 +12,17 @@ const arguImage = {
 const leitlearnImage = {
     src: "/images/LeitlearnSocial.png",
     alt: "leitlearn",
-    width: 35,
-    height: 35,
+    width: 38,
+    height: 38,
     className: "mb-10",
+}
+
+const btpImage = {
+    src: "/images/btp_logo.png",
+    alt: "btp logo",
+    width: 48,
+    height: 48,
+    className: "mb-10 rounded-[.5rem]",
 }
 
 export default async function Project() {
@@ -36,6 +44,16 @@ export default async function Project() {
                 />
                 <Card
                     label="project"
+                    link={t("projects.btp.link")}
+                    title={t("projects.btp.title")}
+                    image={btpImage}
+                    organisation={null}
+                    date={t("projects.btp.date")}
+                    localisation={null}
+                    description={t("projects.btp.description")}
+                />
+                <Card
+                    label="project"
                     link={t("projects.argu_ai.link")}
                     title={t("projects.argu_ai.title")}
                     image={arguImage}
@@ -44,6 +62,7 @@ export default async function Project() {
                     localisation={null}
                     description={t("projects.argu_ai.description")}
                 />
+
             </div>
         </section>
     );

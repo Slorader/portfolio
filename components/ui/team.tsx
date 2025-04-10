@@ -2,7 +2,11 @@ import Link from "next/link";
 import Image from "next/image";
 import React from "react";
 
-export default function Team() {
+interface TeamProps {
+    isAdrian: boolean;
+}
+
+export default function Team({ isAdrian }: TeamProps) {
     return (
         <div className="flex relative h-30">
             <Link
@@ -24,7 +28,7 @@ export default function Team() {
             >
                 <Image
                     src='/images/kilianpeyron.jpg'
-                    alt='Léo Trux'
+                    alt='Kilian Peyron'
                     width={100}
                     height={100}
                     className="w-30 h-30 rounded-[4rem]"
@@ -37,13 +41,28 @@ export default function Team() {
             >
                 <Image
                     src='/images/aimanmanchout.jpg'
-                    alt='Léo Trux'
+                    alt='Aiman Manchout'
                     width={100}
                     height={100}
                     className="w-30 h-30 rounded-[4rem]"
                 >
                 </Image>
             </Link>
+            {isAdrian && (
+                <Link
+                    href='https://www.linkedin.com/in/adrian-rabian-0455a326b/'
+                    className="absolute z-10 rounded-[4rem] left-75 cursor-pointer transition duration-300 ease-in-out hover:border-[var(--main-color)] border-2 border-[var(--border-gray)]"
+                >
+                    <Image
+                        src='/images/adrianrabiant.jpg'
+                        alt='Adrian Rabiant'
+                        width={100}
+                        height={100}
+                        className="w-30 h-30 rounded-[4rem]"
+                    >
+                    </Image>
+                </Link>
+            )}
         </div>
     )
 }
