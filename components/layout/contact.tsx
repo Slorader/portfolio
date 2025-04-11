@@ -124,7 +124,7 @@ export default function Contact() {
                                resetSpecificField={resetSpecificField}
                         />
                         <span
-                            className={` ${errors.name ? "opacity-100" : "opacity-0"} text-[var(--form-error)] text-xs mb-1 mt-1 h-2`}>{errors.name?.message}</span>
+                            className={` ${errors.name ? "opacity-100" : "opacity-0"} text-[var(--form-error)] ml-1 text-xs mb-1 mt-1 h-2`}>{errors.name?.message}</span>
                     </div>
                     <div className="flex flex-col w-1/2">
                         <Input
@@ -136,7 +136,7 @@ export default function Contact() {
                             resetSpecificField={resetSpecificField}
                         />
                         <span
-                            className={` ${errors.email ? "opacity-100" : "opacity-0"} text-[var(--form-error)] text-xs mb-1 mt-1 h-2`}>{errors.email?.message}</span>
+                            className={` ${errors.email ? "opacity-100" : "opacity-0"} text-[var(--form-error)] ml-1 text-xs mb-1 mt-1 h-2`}>{errors.email?.message}</span>
                     </div>
                 </div>
                 <Textarea
@@ -147,7 +147,7 @@ export default function Contact() {
                     resetSpecificField={resetSpecificField}
                 />
                 <span
-                    className={` ${errors.message ? "opacity-100" : "opacity-0"} text-[var(--form-error)] text-xs mb-1  absolute mt-1 h-2`}>{errors.message?.message}</span>
+                    className={` ${errors.message ? "opacity-100" : "opacity-0"} text-[var(--form-error)] ml-1 text-xs mb-1 absolute mt-1 h-2`}>{errors.message?.message}</span>
                 <Button id="button" name="button" label={t("fields.submit")} isLoading={isLoading}/>
             </form>
         </>

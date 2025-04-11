@@ -53,7 +53,7 @@ export default function Input({id, name, type, label, isError, value = "", reset
             />
             <label
                 htmlFor={id}
-                className={`${hasValue ? "top-4 text-xs" : ""} z-20 group-focus-within:text-xs group-focus-within:top-4 text-[var(--dark-gray)] absolute left-0 top-1/2 transform -translate-y-1/2 pl-4 transition-all duration-300 ease-in-out`}>
+                className={`${hasValue ? "top-4 text-xs" : ""} z-20 pointer-events-none group-focus-within:text-xs group-focus-within:top-4 text-[var(--dark-gray)] absolute left-0 top-1/2 transform -translate-y-1/2 pl-4 transition-all duration-300 ease-in-out`}>
                 {label}
             </label>
             <IoMdClose fontSize={25}

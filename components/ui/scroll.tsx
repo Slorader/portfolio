@@ -5,18 +5,28 @@ import { FaArrowUp } from "react-icons/fa6";
 
 export default function ScrollToTop() {
     const [isVisible, setIsVisible] = useState(false);
+    const [hide, setHide] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
             setIsVisible(window.scrollY > 300);
         };
 
+        const hideScrollButton = () => {
+            if (window.innerWidth < 950) {
+                setHide(true);
+            }
+        }
+
         window.addEventListener("scroll", handleScroll);
+        window.addEventListener("resize", hideScrollButton);
 
         return () => {
             window.removeEventListener("scroll", handleScroll);
         };
     }, []);
+
+    if (hide) return null;
 
     return (
         <div

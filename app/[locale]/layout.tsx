@@ -19,7 +19,7 @@ export default async function RootLayout({children, params}: {
         <html lang="en">
         <body>
         <Suspense fallback={<Loading />}>
-            <div className="mx-auto max-w-150 z-2 flex flex-col justify-center">
+            <div className="mx-auto px-6 max-w-150 z-2 flex flex-col justify-center">
                 <Providers local={locale}>{children}</Providers>
                 <Scroll/>
             </div>
