@@ -18,47 +18,47 @@ export default function Team({ isAdrian }: TeamProps) {
                     alt='Léo Trux'
                     width={100}
                     height={100}
-                    className="w-30 h-30 rounded-[4rem]"
+                    className="w-20 h-20 sm:w-30 sm:h-30 rounded-[4rem]"
                 >
                 </Image>
             </Link>
             <Link
                 href='https://www.linkedin.com/in/kilianpeyron/'
-                className="absolute z-30 left-25 rounded-[4rem] cursor-pointer transition duration-300 ease-in-out hover:border-[var(--main-color)] border-2 border-[var(--border-gray)]"
+                className="absolute z-30 left-15 sm:left-25 rounded-[4rem] cursor-pointer transition duration-300 ease-in-out hover:border-[var(--main-color)] border-2 border-[var(--border-gray)]"
             >
                 <Image
                     src='/images/kilianpeyron.jpg'
                     alt='Kilian Peyron'
                     width={100}
                     height={100}
-                    className="w-30 h-30 rounded-[4rem]"
+                    className="w-20 h-20 sm:w-30 sm:h-30 rounded-[4rem]"
                 >
                 </Image>
             </Link>
             <Link
                 href='https://www.linkedin.com/in/aiman-manchout/'
-                className="absolute z-20 rounded-[4rem] left-50 cursor-pointer transition duration-300 ease-in-out hover:border-[var(--main-color)] border-2 border-[var(--border-gray)]"
+                className="absolute z-20 rounded-[4rem] left-30 sm:left-50 cursor-pointer transition duration-300 ease-in-out hover:border-[var(--main-color)] border-2 border-[var(--border-gray)]"
             >
                 <Image
                     src='/images/aimanmanchout.jpg'
                     alt='Aiman Manchout'
                     width={100}
                     height={100}
-                    className="w-30 h-30 rounded-[4rem]"
+                    className="w-20 h-20 sm:w-30 sm:h-30 rounded-[4rem]"
                 >
                 </Image>
             </Link>
             {isAdrian && (
                 <Link
                     href='https://www.linkedin.com/in/adrian-rabian-0455a326b/'
-                    className="absolute z-10 rounded-[4rem] left-75 cursor-pointer transition duration-300 ease-in-out hover:border-[var(--main-color)] border-2 border-[var(--border-gray)]"
+                    className="absolute z-10 rounded-[4rem] left-45 sm:left-75 cursor-pointer transition duration-300 ease-in-out hover:border-[var(--main-color)] border-2 border-[var(--border-gray)]"
                 >
                     <Image
                         src='/images/adrianrabiant.jpg'
                         alt='Adrian Rabiant'
                         width={100}
                         height={100}
-                        className="w-30 h-30 rounded-[4rem]"
+                        className="w-20 h-20 sm:w-30 sm:h-30 rounded-[4rem]"
                     >
                     </Image>
                 </Link>

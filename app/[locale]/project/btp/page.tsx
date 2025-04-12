@@ -11,7 +11,7 @@ export default async function Page() {
 
     return (
         <>
-            <div className="mx-auto max-w-150 z-2 flex flex-col justify-center">
+            <div className="max-w-150 z-2 flex flex-col justify-center">
                 <Link href="/" className="flex flex-row items-center mt-20 mb-8 group cursor-pointer">
                     <FaCircleArrowLeft
                         className="group-hover:text-[var(--main-color)] transition duration-300 ease-in-out mr-3"
