@@ -22,9 +22,9 @@ export default function Button({ label, icon, link }: ButtonProps) {
     const selectedIcon = iconsMap[icon];
 
     return (
-        <a href={link} className="active:scale-90 group transition duration-300 ease-in-out hover:border-[var(--main-color)] flex items-center p-3 justify-center mt-10 w-45 rounded-[.5rem] border-2 border-solid border-[var(--border-gray)] cursor-pointer mr-5">
+        <a href={link} className="active:scale-90 group transition duration-300 ease-in-out hover:border-[var(--main-color)] flex items-center p-2 sm:p-3 md:p-3 justify-center w-45 rounded-[.5rem] border-2 border-solid border-[var(--border-gray)] cursor-pointer mr-5">
             {selectedIcon}
-            <span className="ml-3 mt-1 font-semibold transition duration-300 ease-in-out group-hover:text-[var(--main-color)]">
+            <span className="ml-3 mt-1 hidden sm:flex font-semibold transition duration-300 ease-in-out group-hover:text-[var(--main-color)]">
                 {label}
             </span>
         </a>

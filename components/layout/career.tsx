@@ -1,20 +1,24 @@
 import Card from "@/components/ui/card";
 import { getI18n } from "@/locales/server";
 
+const ccsdImage = {
+    src: "/images/ccsd_logo.jpg",
+    alt: "CCSD",
+    width: 70,
+    height: 20,
+};
 const rguImage = {
     src: "/images/RGU.jpg",
     alt: "RGU",
     width: 100,
     height: 10,
-    className: "w-12 h-12",
 };
 
 const lyonImage = {
     src: "/images/UCBL-logo.png",
     alt: "Lyon",
-    width: 70,
-    height: 20,
-    className: "",
+    width: 100,
+    height: 10,
 };
 
 export default async function Career() {
@@ -28,7 +32,7 @@ export default async function Career() {
                     label={t("career.ccsd.label")}
                     link="https://www.ccsd.cnrs.fr/"
                     title={t("career.ccsd.title")}
-                    image={null}
+                    image={ccsdImage}
                     organisation={t("career.ccsd.organisation")}
                     date={t("career.ccsd.date")}
                     localisation={t("career.ccsd.location")}

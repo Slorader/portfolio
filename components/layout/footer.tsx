@@ -7,14 +7,14 @@ export default async function Footer() {
     return (
         <div className="flex flex-col w-full mt-20">
             <span className="w-full h-[1px] bg-[var(--border-gray)]"></span>
-            <span className="text-5xl font-bold mt-10 mb-5">
+            <span className="text-3xl sm:text-5xl font-bold mt-10 mb-5">
                 {t("footer.collaborate")}
             </span>
             <span className="text-[var(--gray)] mb-10">
                 {t("footer.contact_info")}
             </span>
             <Contact />
-            <div className="relative flex items-center w-full mt-20 mb-5 gap-2">
+            <div className="relative flex flex-col sm:flex-row items-center w-full mt-20 mb-5 gap-2">
                 <span className="text-[var(--gray)]">{t("footer.copyright")}</span>
                 <span className="text-[var(--gray)]">{t("footer.tech_stack")}</span>
             </div>

@@ -6,15 +6,13 @@ const arguImage = {
     alt: "Argu Ai",
     width: 50,
     height: 20,
-    className: "mb-10",
 };
 
 const leitlearnImage = {
     src: "/images/LeitlearnSocial.png",
     alt: "leitlearn",
-    width: 38,
-    height: 38,
-    className: "mb-10",
+    width: 30,
+    height: 30,
 }
 
 const btpImage = {
@@ -22,7 +20,6 @@ const btpImage = {
     alt: "btp logo",
     width: 48,
     height: 48,
-    className: "mb-10 rounded-[.5rem]",
 }
 
 export default async function Project() {

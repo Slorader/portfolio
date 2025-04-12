@@ -34,7 +34,7 @@ export default function Modal({image, title, subTitle, message, buttonLabel, isO
     },[closeModal, isOpen]);
 
     return (
-        <div className="fixed top-0 left-0 z-50 inset-0 flex justify-center items-center bg-[#2b3247]/50">
+        <div className="fixed flex px-6 top-0 left-0 z-50 inset-0 flex justify-center items-center bg-[#2b3247]/50">
             <motion.div
                 initial={{y: 100, opacity: 0}}
                 animate={{y: 0, opacity: 1}}
@@ -50,18 +50,18 @@ export default function Modal({image, title, subTitle, message, buttonLabel, isO
                                onClick={closeModal}
                     />
                 </div>
-                <div className="relative flex flex-col justify-center items-center p-5 mx-30">
+                <div className="flex flex-col items-center p-5 sm:mx-30 mx-4 h-full">
                     <Image src={image.src}
                            width="120"
                            height="120"
                            alt={image.alt}
-                           className="mb-5 select-none"
+                           className="mb-5 w-25 sm:w-30 select-none"
                     />
-                    <span className="text-3xl font-bold mb-4 text-center">{subTitle}</span>
+                    <span className="text-2xl font-bold mb-4 text-center">{subTitle}</span>
                     <span className="text-center text-[var(--gray)]">{message}</span>
                     <button
                         onClick={closeModal}
-                        className="active:scale-95 absolute -bottom-20 w-full transition duration-300 ease-in-out flex items-center cursor-pointer bg-gradient-to-br text-white font-bold from-[var(--main-color)] to-[#825df6] rounded-[.5rem] w-50 justify-center px-5 h-15">
+                        className="active:scale-95 mt-10 w-full transition duration-300 ease-in-out flex items-center cursor-pointer bg-gradient-to-br text-white font-bold from-[var(--main-color)] to-[#825df6] rounded-[.5rem] w-50 justify-center px-5 h-15">
                         {buttonLabel}
                     </button>
                 </div>

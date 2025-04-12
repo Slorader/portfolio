@@ -25,12 +25,12 @@ export default async function Page() {
                 <p className="mt-10 text-[var(--gray)]">{t("btp.intro")}</p>
                 <div className="flex flex-col mt-10">
                     <h2 className="text-3xl bold font-bold mb-3">{t('btp.s1.title')}</h2>
-                    <li className="ml-4 mb-5 text-[var(--gray)]">{t('btp.s1.p1')}</li>
+                    <p className="mb-5 text-[var(--gray)]">{t('btp.s1.p1')}</p>
                 </div>
                 <div className="flex flex-col mt-10">
                     <h2 className="text-3xl bold font-bold mb-3">{t('btp.s2.title')}</h2>
-                    <li className="ml-4 mb-5 text-[var(--gray)]">{t('btp.s2.p1')}</li>
-                    <li className="ml-4 mb-5 text-[var(--gray)]">{t('btp.s2.p2')}</li>
+                    <p className="mb-5 text-[var(--gray)]">{t('btp.s2.p1')}</p>
+                    <p className="mb-5 text-[var(--gray)]">{t('btp.s2.p2')}</p>
                 </div>
                 <div className="flex flex-col mt-10">
                     <h2 className="text-3xl bold font-bold mb-5">{t('leitlearn.team')}
@@ -39,7 +39,7 @@ export default async function Page() {
                 </div>
                 <div className="flex flex-col mt-10">
                     <h2 className="text-3xl bold font-bold">{t('docs_title')}</h2>
-                    <div className="flex flex-row w-full">
+                    <div className="flex flex-row w-full mt-3">
                         <Button label="Github" icon="github" link="https://github.com/Slorader/BTP"/>
                     </div>
                 </div>

@@ -22,16 +22,16 @@ export default async function Home() {
             {/*    </div>*/}
             {/*    <p className="text-lg text-[var(--gray)] h-[24px]">{t('available_for_hire')}</p>*/}
             {/*</div>*/}
-            <div className="flex flex-col text-6xl bold font-bold mt-20">
+            <div className="flex flex-col text-4xl lg:text-6xl md:text-5xl bold font-bold mt-20">
                 <span>Léo Trux</span>
                 <span className="text-[var(--main-color)]">{t('home.web_developer')}</span>
             </div>
-            <div className="flex flex-row w-full">
+            <div className="flex flex-row w-full mt-8 sm:mt-10">
                 <Button label="Github" icon="github" link="https://github.com/Slorader"/>
                 <Button label="Linkedin" icon="linkedin" link="https://www.linkedin.com/in/leo-trux/"/>
                 <Button label="CV" icon="cv" link={"/docs/truxleo_cv_" + locale + ".pdf"}/>
             </div>
-            <p className="mt-10 text-[var(--gray)]">{t('home.intro')}</p>
+            <p className="mt-8 sm:mt-10 text-[var(--gray)]">{t('home.intro')}</p>
             <p className="mt-4 text-[var(--gray)]">{t('home.skills')}</p>
             <span className="w-full h-[1px] bg-[var(--border-gray)] mt-8 mb-8"></span>
             <Project/>
