@@ -23,7 +23,7 @@ export default async function Home() {
             {/*    <p className="text-lg text-[var(--gray)] h-[24px]">{t('available_for_hire')}</p>*/}
             {/*</div>*/}
             <div className="flex flex-col text-4xl lg:text-6xl md:text-5xl bold font-bold mt-20">
-                <span>Léo Trux</span>
+                <h1>Léo Trux</h1>
                 <span className="text-[var(--main-color)]">{t('home.web_developer')}</span>
             </div>
             <div className="flex flex-row w-full mt-8 sm:mt-10">

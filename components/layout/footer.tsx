@@ -7,9 +7,9 @@ export default async function Footer() {
     return (
         <div className="flex flex-col w-full mt-20">
             <span className="w-full h-[1px] bg-[var(--border-gray)]"></span>
-            <span className="text-3xl sm:text-5xl font-bold mt-10 mb-5">
+            <h2 className="text-3xl sm:text-5xl font-bold mt-10 mb-5">
                 {t("footer.collaborate")}
-            </span>
+            </h2>
             <span className="text-[var(--gray)] mb-10">
                 {t("footer.contact_info")}
             </span>
